@@ -48,7 +48,12 @@ public class ControlFlowExercises {
 //            256
 //            65536
 
+            long b = 2;
 
+            do {
+                System.out.println(b);
+                b *= b;
+            } while (b < 1000000);
 
 
 
