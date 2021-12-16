@@ -187,12 +187,52 @@ public class ControlFlowExercises {
             while (!choice.equalsIgnoreCase("n"));
 
 
+//            Question 4
+//            Convert given number grades into letter grades.
+//
+//                    Prompt the user for a numerical grade from 0 to 100.
+//            Display the corresponding letter grade.
+//                    Prompt the user to continue.
+//            Assume that the user will enter valid integers for the grades.
+//            The application should only continue if the user agrees to.
+//
+//            Grade Ranges:
+//            A : 100 - 88
+//            B : 87 - 80
+//            C : 79 - 67
+//            D : 66 - 60
+//            F : 59 - 0
+
+            String choice2 = "y";
+
+            do {
+
+                System.out.println("Please enter your grade ");
+                int grade = scanner.nextInt();
+
+                if (grade >= 88) {
+                    System.out.println("A");
+                } else if (grade >= 80 && grade <= 87) {
+                    System.out.println("B");
+                } else if (grade >= 67 && grade <= 79) {
+                    System.out.println("C");
+                } else if (grade >= 60 && grade <= 66) {
+                    System.out.println("D");
+                } else if (grade >= 0 && grade <= 59) {
+                    System.out.println("C");
+                }
 
 
+//Print out grade
 
+                System.out.println("You have a " + grade + " in the class.");
 
+                System.out.print("Continue? (y/n): ");
+                choice2 = scanner.next();
+                System.out.println();
+            }
 
-
+            while (!choice2.equalsIgnoreCase("n"));
 
 
         }
