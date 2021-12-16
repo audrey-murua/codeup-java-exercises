@@ -55,6 +55,31 @@ public class ControlFlowExercises {
                 b *= b;
             } while (b < 1000000);
 
+            //question 1.c
+//            Refactor the previous two exercises to use a for loop instead.
+
+//            Create a while loop that runs so long as i is less than or equal to 15
+            for(int c = 5; c <= 15; c++) {
+                System.out.printf("%s ", c);
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
