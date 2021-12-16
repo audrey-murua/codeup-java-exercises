@@ -30,7 +30,23 @@ public class ControlFlowExercises {
                 x+=2;
             } while (x <= 100);
 
+//            Alter your loop to count backwards by 5's from 100 to -10.
 
+            int a = 100;
+
+            do {
+                System.out.println(a);
+                a-=5;
+            } while (a >= -10);
+
+
+//            Create a do-while loop that starts at 2, and displays the number squared on each line while the number is less than 1,000,000. Output should equal:
+
+//            2
+//            4
+//            16
+//            256
+//            65536
 
 
 
