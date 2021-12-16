@@ -76,6 +76,17 @@ public class ControlFlowExercises {
             }
 
 
+//            Create a do-while loop that starts at 2, and displays the number squared on each line while the number is less than 1,000,000. Output should equal:
+
+//            2
+//            4
+//            16
+//            256
+//            65536
+
+            for(long f = 2; f <= 1000000; f*=f) {
+                System.out.println(f);
+            }
 
 
 
