@@ -69,7 +69,11 @@ public class ControlFlowExercises {
                 System.out.println(d);
             }
 
+//            Alter your loop to count backwards by 5's from 100 to -10.
 
+            for(int e = 100; e >= -10; e-=5) {
+                System.out.println(e);
+            }
 
 
 
