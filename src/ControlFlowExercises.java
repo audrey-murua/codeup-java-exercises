@@ -19,8 +19,16 @@ public class ControlFlowExercises {
                 i++;
             }
 
+            //question 1.b
 
+//            Create a do-while loop that will count by 2's starting with 0 and ending at 100. Follow each number with a new line.
+//
+            int x = 0;
 
+            do {
+                System.out.println(x);
+                x+=2;
+            } while (x <= 100);
 
 
 
