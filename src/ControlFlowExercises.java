@@ -110,10 +110,81 @@ public class ControlFlowExercises {
                 else
                     System.out.println(g);
 
-
             }
 
 
+            //Question 3
+
+//            Display a table of powers.
+//
+//                    Prompt the user to enter an integer.
+//            Display a table of squares and cubes from 1 to the value entered.
+//            Ask if the user wants to continue.
+//            Assume that the user will enter valid data.
+//            Only continue if the user agrees to.
+//
+//            Example Output
+//            What number would you like to go up to? 5
+//
+//            Here is your table!
+//
+//                    number | squared | cubed
+//                    ------ | ------- | -----
+//                    1      | 1       | 1
+//            2      | 4       | 8
+//            3      | 9       | 27
+//            4      | 16      | 64
+//            5      | 25      | 125
+
+            //other solution
+
+//            System.out.print("What number would you like to go up to? ");
+//            int userInt = scanner.nextInt();
+//            System.out.println("");
+//            System.out.println("Here is your table!");
+//            System.out.println("");
+//            System.out.println("number | squared | cubed");
+//            System.out.println("------ | ------- | -----");
+//
+//            for (int j = 1; j <= userInt; j++){
+//                System.out.println(j + "      | " + (j * j) + "       |" + "  " +(j * j * j));
+//            }
+
+
+            String choice = "y";
+            do
+            {
+
+                // Get input from the user
+                System.out.print("Enter an integer: ");
+                int integer = scanner.nextInt();
+
+                // Create a header
+                String header = "Number  " + "Squared " + "Cubed   " + "\n"
+                        +   "======  " + "======= " + "=====   ";
+                System.out.println(header);
+
+                int square = 0;
+                int cube = 0;
+
+                String row = "";
+                for (int j = 1; j <= integer; j++)
+                {
+
+                    square = j * j;
+                    cube = j * j * j;
+
+                    row = j + "       " + square + "       " + cube;
+                    System.out.println(row);
+                }
+
+                // See if the user wants to continue
+                System.out.print("Continue? (y/n): ");
+                choice = scanner.next();
+                System.out.println();
+
+            }
+            while (!choice.equalsIgnoreCase("n"));
 
 
 
