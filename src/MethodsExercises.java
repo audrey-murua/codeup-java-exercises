@@ -48,12 +48,28 @@ public class MethodsExercises {
         return factorial;
     }
 
-//    public static long getDice (int dice1, int dice2) {
-//
-//
-//
-//
-//    }
+    public static void getDice () {
+
+        Scanner sc = new Scanner(System.in);
+        String userAnswer;
+        System.out.println("Enter number of sides for a pair of dice: ");
+        int userDice = sc.nextInt();
+        System.out.printf("You entered: %s\n", userDice);
+        System.out.println("Do you want to roll the dice (Yes or No)?");
+        String userConfirmation = sc.next();
+        if (userConfirmation.equalsIgnoreCase("yes")) {
+            do {
+                int dice1 = (int) Math.floor(Math.random() * userDice);
+                int dice2 = (int) Math.floor(Math.random() * userDice);
+                System.out.println(dice1);
+                System.out.println(dice2);
+
+                System.out.println("Would you like to play again?(Yes or No)");
+                userAnswer = sc.next();
+            } while (userAnswer.equalsIgnoreCase("yes"));
+        }
+    }
+
 
     public static void main(String[] args) {
 
@@ -67,21 +83,11 @@ public class MethodsExercises {
 
         System.out.println(getFactorial(4));
 
-
-
-
+        getDice();
 
 
 
     }
-
-
-
-
-
-
-
-
 
 
 }
