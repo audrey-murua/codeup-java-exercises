@@ -33,9 +33,9 @@ public class Input {
 
 
     public int getInt() {
-        System.out.println("Enter a number");
+        System.out.println("Enter a number: ");
         int userNumber = scanner.nextInt();
-        System.out.printf("You entered %d \n", userNumber);
+//        System.out.printf("You entered %d \n", userNumber);
         return userNumber;
     }
 
