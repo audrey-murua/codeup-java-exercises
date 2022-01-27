@@ -17,7 +17,7 @@ public class MoviesApplication {
             System.out.println("3 - view movies in the drama category");
             System.out.println("4 - view movies in the horror category");
             System.out.println("5 - view movies in the sci-fi category");
-            int userChoice = input.getInt();
+            int userChoice = (int) input.getInt();
             System.out.printf("You chose %s.\n", userChoice);
 
             if (userChoice < 0 || userChoice > 5) {
