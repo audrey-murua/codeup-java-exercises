@@ -6,7 +6,7 @@ public class Input {
     private Scanner scanner = new Scanner(System.in);
 
     public String getString() {
-        System.out.println("Type something here: ");
+        System.out.println("Enter choice here: ");
         String userResponse = scanner.nextLine();
         System.out.printf("You entered: %s \n", userResponse);
         return userResponse;
@@ -32,10 +32,33 @@ public class Input {
     }
 
 
-    public int getInt() {
-        System.out.println("Enter a number: ");
-        int userNumber = scanner.nextInt();
-//        System.out.printf("You entered %d \n", userNumber);
+//    public int getInt() {
+//        System.out.println("Enter a number: ");
+//        int userNumber = scanner.nextInt();
+////        System.out.printf("You entered %d \n", userNumber);
+//        return userNumber;
+//    }
+
+//    public int getInt() {
+//        System.out.println("Enter a number: ");
+//        int userNumber = scanner.nextInt();
+//        try {
+//            userNumber = Integer.valueOf(this.getString());
+//        } catch (NumberFormatException e) {
+//            return getInt();
+//        }
+//        return userNumber;
+//    }
+
+    public double getInt() {
+        String userInput = getString();
+        int userNumber;
+        try {
+            userNumber = Integer.valueOf(userInput);
+        } catch (NumberFormatException e) {
+            e.printStackTrace();
+            return getInt();
+        }
         return userNumber;
     }
 
@@ -48,10 +71,23 @@ public class Input {
         return userNumber;
     }
 
+//    public double getDouble() {
+//        System.out.println("Enter a number.");
+//        double userNumber = scanner.nextDouble();
+//        System.out.printf("You entered: %f \n", userNumber);
+//        return userNumber;
+//    }
+
+
     public double getDouble() {
-        System.out.println("Enter a number.");
-        double userNumber = scanner.nextDouble();
-        System.out.printf("You entered: %f \n", userNumber);
+        String userInput = getString();
+        double userNumber;
+        try {
+            userNumber = Double.valueOf(userInput);
+        } catch (NumberFormatException e) {
+            e.printStackTrace();
+            return getDouble();
+        }
         return userNumber;
     }
 
